@@ -1,44 +1,24 @@
 # install xcode build tools
-
 xcode-select --install
 
 # install homebrew
-
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# opt out of sending analytics-data to homebrew; 
+brew analytics off
+
 # install homebrew formulae
+xargs brew install < brew-formulae.txt
 
 # install homebrew casks
+xargs brew install < brew-casks.txt
 
-# setup bash_profile and other dot files
-
-cd ~
-
-curl -O https://raw.githubusercontent.com/w3cj/dotfiles/master/.bash_profile
-
-curl -O https://github.com/w3cj/dotfiles/blob/master/.gitignore
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # configure git
-
-git config --global user.name w3cj
-
-git config --global user.email cj@null.computer
-
-git config --global core.editor nano
-
-# install node version manager
-
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/HEAD/install.sh | bash
-
-nvm install lts
-nvm install latest
-
-# global npm installs
-
-nvm use latest
-npm install -g lite-server gitignore license
+git config --global user.name laurenshellingwerf
+git config --global user.email laurens.hellingwerf@gmail.com
 
 # create dev folder
-
-mkdir ~/dev
-
+mkdir ~/codebase
