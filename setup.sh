@@ -20,5 +20,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git config --global user.name laurenshellingwerf
 git config --global user.email laurens.hellingwerf@gmail.com
 
+# install Node.js Version Manager
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/HEAD/install.sh | bash
+
+# install the Long-Term Support (LTS) version of Node.js
+nvm install --lts
+
 # create dev folder
 mkdir ~/codebase
