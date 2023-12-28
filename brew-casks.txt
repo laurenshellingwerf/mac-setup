@@ -1,4 +1,5 @@
 google-chrome
 raycast
 rectangle
+spotify
 visual-studio-code

@@ -16,9 +16,11 @@ xargs brew install < brew-casks.txt
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# TODO: check theme for 'oh my zsh' like powerlevel 10k (https://github.com/romkatv/powerlevel10k) 
+
 # configure git
 git config --global user.name laurenshellingwerf
-git config --global user.email laurens.hellingwerf@gmail.com
+git config --global user.email <<email here>>
 
 # install Node.js Version Manager
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/HEAD/install.sh | bash
